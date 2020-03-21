@@ -25,7 +25,10 @@ fi
 echo "-----------------------------"
 echo "Setting permissions/ownership"
 echo "-----------------------------"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1cadc21debc3b6de6e7f4fdb6479e0a2870de5d6
 chown root -R $PWD
 chmod 777 -R $PWD
 
