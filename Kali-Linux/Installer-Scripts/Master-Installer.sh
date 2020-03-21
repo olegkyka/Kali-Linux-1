@@ -25,8 +25,8 @@ fi
 echo "-----------------------------"
 echo "Setting permissions/ownership"
 echo "-----------------------------"
-chown root -R /root/Desktop/Kali-Linux
-chmod 777 -R /root/Desktop/Kali-Linux
+chown root -R $PWD
+chmod 777 -R $PWD
 
 
 # Download Updates
@@ -239,6 +239,16 @@ sudo add-apt-repository ppa:mystic-mirage/komodo-edit
 sudo apt-get update
 sudo apt-get install komodo-edit
 
+# Install Atom
+echo "---------------"
+echo "Installing Atom"
+echo "---------------"
+wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add
+sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
+sudo apt-get update
+sudo apt-get install atom
+sudo apt-get install atom-beta
+
 # Install Chromium
 echo "---------------------------"
 echo "Installing Chromium Browser"
@@ -267,7 +277,7 @@ sudo apt-get install sublime-text
 
 # Create Desktop Links
 cd
-cd Desktop 
+cd Desktop
 echo "[Desktop Entry]
 Name=Start x11vnc
 Comment=Start x11vnc
@@ -284,7 +294,7 @@ Exec=chromium --no-sandbox
 Icon=applications-internet
 Type=Application " > Chromium.desktop
 
-# Copy Identity 
+# Copy Identity
 cp -f /root/Desktop/Fern-Pen-Testing/Identity > /root/Desktop
 
 # Downloading Final Set Of Updates
@@ -350,4 +360,4 @@ echo "--------------------"
 echo "----------------------------"
 echo "Fernwood.Penetration.Testing"
 echo "----------------------------"
-reboot 
+reboot

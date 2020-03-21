@@ -25,8 +25,9 @@ fi
 echo "-----------------------------"
 echo "Setting permissions/ownership"
 echo "-----------------------------"
-chown root -R /root/Desktop/Kali-Linux
-chmod 777 -R /root/Desktop/Kali-Linux
+
+chown root -R $PWD
+chmod 777 -R $PWD
 
 # Exit
 echo "----------------------------"
